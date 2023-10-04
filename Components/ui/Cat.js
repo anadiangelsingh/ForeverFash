@@ -1,12 +1,13 @@
-import {View, TouchableOpacity, Image, StyleSheet} from 'react-native';
+import {View, TouchableOpacity, Image, StyleSheet, Text} from 'react-native';
 
-function Cat({source, onPress}) {
+function Cat({source, onPress, catName}) {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <View style={styles.container}>
       <View style={styles.imageBackground}>
         <Image style={styles.imageButton} source={{uri: source}} />
       </View>
-    </TouchableOpacity>
+      <Text style={styles.text}>{catName}</Text>
+    </View>
   );
 }
 
@@ -29,15 +30,22 @@ import IconButton from './Icon';
 export default Cat;
 
 const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+  },
+
   imageButton: {
     height: 50,
     width: 50,
     resizeMode: 'stretch',
   },
   imageBackground: {
-    backgroundColor: '#e6dfdf',
-    borderRadius: 20,
+    backgroundColor: '#ffffffff',
+    borderRadius: 100,
     padding: 6,
     margin: 8,
+  },
+  text: {
+    marginTop: 5,
   },
 });
