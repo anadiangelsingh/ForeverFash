@@ -1,12 +1,13 @@
-import { Text, View,StyleSheet } from "react-native";
+import { Text, View,StyleSheet, SafeAreaView } from "react-native";
 import Header from "../Components/Header";
 import SubHeader from "../Components/SubHeader";
 
 function MainScreen(){
     return (
-        <View ><Header/>
-        <Text>hello</Text>
-        <SubHeader/></View>
+        <SafeAreaView style={styles.screen}>
+        <Header/>
+     
+        <SubHeader/></SafeAreaView>
     )
 }
 
@@ -16,5 +17,8 @@ const styles=StyleSheet.create({
     container:{
         flexDirection:"column",
         flex:1
+    },
+    screen:{
+
     }
 })

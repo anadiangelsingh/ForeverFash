@@ -22,7 +22,8 @@ const styles=StyleSheet.create({
     header:{
         flexDirection:"row",
         margin:2,
-        padding:4
+        padding:4,
+        marginTop:6
     },
     textInput:{
         flexDirection:"row",

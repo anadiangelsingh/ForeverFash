@@ -1,12 +1,13 @@
 import {View,StyleSheet,Image,Text} from 'react-native'
 import IconButton from './Icon'
-function Cat({source}){
-    return (<View>
+function Cat({source,text}){
+    return (<View style={style.container}>
     
     <View style={style.imageBackground}>
     <Image style={style.imageButton}
      source={{uri:source}}/>
     </View>
+    <Text style={style.text}>{text}</Text>
     
     </View>)
 }
@@ -19,9 +20,19 @@ const style=StyleSheet.create({
         resizeMode:'stretch'
     },
     imageBackground:{
-        backgroundColor:'#e6dfdf',
-        borderRadius:20,
+        backgroundColor:'#ffffff',
+        borderRadius:25,
         padding:6,
         margin:8
+    },
+    container:{
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    text:{
+        fontSize:16,
+        fontWeight:'700',
+        
+        color:'black',
     }
 })
