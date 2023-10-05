@@ -25,3 +25,6 @@ npm install --save react-native-vector-icons
   </array> -->
 
 cd ios && Pod install
+
+
+

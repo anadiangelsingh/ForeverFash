@@ -1,31 +1,25 @@
-import {View, TouchableOpacity, Image, StyleSheet, Text} from 'react-native';
+import {View, TouchableOpacity, Image, StyleSheet, Text, Pressable} from 'react-native';
 
-function Cat({source, onPress, catName}) {
+function Cat({source, catName,iconBackground,flex,text}) {
+  const navigation=useNavigation();
+  function categoriesHandler(){
+      navigation.navigate('Categories')
+  }
   return (
-    <View style={styles.container}>
-      <View style={styles.imageBackground}>
+    <Pressable style={[styles.container,flex]} onPress={categoriesHandler}>
+      <View style={[styles.imageBackground,iconBackground]}>
         <Image style={styles.imageButton} source={{uri: source}} />
       </View>
-      <Text style={styles.text}>{catName}</Text>
-    </View>
+      <Text style={[styles.text,text]}>{catName}</Text>
+    </Pressable>
   );
 }
 
-//import {View, StyleSheet, Image, Text} from 'react-native';
+
 
 import IconButton from './Icon';
-// function Cat({source}){
-//     return (<View>
+import { useNavigation } from '@react-navigation/native';
 
-//     <View style={style.imageBackground}>
-//     <Image style={style.imageButton}
-//      source={{uri:source}}/>
-//     </View>
-
-//     </View>)
-// }
-
-// Component added made pressable
 
 export default Cat;
 
@@ -47,5 +41,8 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: 5,
+    color:'black',
+    fontWeight:'700',
+    fontSize:15
   },
 });
