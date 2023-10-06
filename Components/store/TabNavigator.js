@@ -64,6 +64,7 @@ const TabNavigator = () => {
           tabBarLabel: '',
           tabBarIconName: 'home', // Customize icon name
           showLabel: false,
+          headerShown: false,
         }}
       />
       <Tab.Screen
@@ -72,6 +73,8 @@ const TabNavigator = () => {
         options={{
           tabBarLabel: 'Wishlist',
           tabBarIconName: 'heart', // Customize icon name
+          showLabel: false,
+          headerShown: false,
         }}
       />
       <Tab.Screen
@@ -80,6 +83,8 @@ const TabNavigator = () => {
         options={{
           tabBarLabel: 'Favourite',
           tabBarIconName: 'star', // Customize icon name
+          showLabel: false,
+          headerShown: false,
         }}
       />
       <Tab.Screen
@@ -88,6 +93,8 @@ const TabNavigator = () => {
         options={{
           tabBarLabel: 'Profile',
           tabBarIconName: 'person', // Customize icon name
+          showLabel: false,
+          headerShown: false,
         }}
       />
     </Tab.Navigator>
