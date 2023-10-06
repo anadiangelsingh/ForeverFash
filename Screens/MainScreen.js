@@ -1,6 +1,7 @@
 import {Dimensions, View, StyleSheet} from 'react-native';
 import Header from '../Components/Header';
 import SubHeader from '../Components/SubHeader';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 function MainScreen() {
   const screenHeight = Dimensions.get('window').height;
@@ -8,10 +9,12 @@ function MainScreen() {
   const topSpace = (screenHeight * topSpacePercentage) / 100;
 
   return (
-    <View style={[styles.container, {marginTop: topSpace}]}>
-      <Header />
-      <SubHeader />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View style={[styles.container, {marginTop: topSpace}]}>
+        <Header />
+        <SubHeader />
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -22,7 +25,9 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     flex: 1,
     backgroundColor: '#EEEEEE',
-
-    //paddingTop: 20, // Adjust this value to set the space from the top
+  },
+  container: {
+    flex: 1,
+    backgroundColor: '#f2eeee',
   },
 });
