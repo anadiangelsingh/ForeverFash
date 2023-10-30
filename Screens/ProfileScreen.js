@@ -4,13 +4,13 @@ import {CategoriesScreen} from './CategoriesScreen';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 function ProfileScreen() {
-  const categoryId = 'Men'; // Replace with the actual category ID you want to fetch
+  // const categoryId = 'Men'; // Replace with the actual category ID you want to fetch
   return (
     <SafeAreaView>
       <ScrollView>
         <View>
           <Text>tdhdh</Text>
-          <CategoriesScreen categoryId={categoryId} />
+          <CategoriesScreen categoryId={' Sports'} />
         </View>
       </ScrollView>
     </SafeAreaView>

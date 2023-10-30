@@ -7,6 +7,7 @@ import ProfileScreen from '../../Screens/ProfileScreen';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {View} from 'react-native';
 import CategoriesScreen from '../../Screens/CategoriesScreen';
+import HomeScreen from '../../Screens/HomeScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -60,7 +61,7 @@ const TabNavigator = () => {
     <Tab.Navigator tabBar={props => <CustomTabBar {...props} />}>
       <Tab.Screen
         name=" "
-        component={MainScreen}
+        component={HomeScreen}
         options={{
           tabBarLabel: '',
           tabBarIconName: 'home', // Customize icon name
@@ -70,7 +71,7 @@ const TabNavigator = () => {
       />
       <Tab.Screen
         name="Wishlist"
-        component={WishlistScreen}
+        component={MainScreen}
         options={{
           tabBarLabel: 'Wishlist',
           tabBarIconName: 'star', // Customize icon name

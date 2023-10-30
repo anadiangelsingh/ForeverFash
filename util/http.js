@@ -6,6 +6,7 @@ const instance = axios.create({
 
 export function fetchCategories(categoryId) {
   return instance.get(`/categories/${categoryId}.json`);
+
   // Modify the URL to include the categoryId in the request
   // return instance.get(`/categories/${categoryId}.json`).then(response => {
   //   // Handle the response data here

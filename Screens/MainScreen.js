@@ -22,11 +22,6 @@ export default MainScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
-    flex: 1,
-    backgroundColor: '#EEEEEE',
-  },
-  container: {
     flex: 1,
     backgroundColor: '#f2eeee',
   },

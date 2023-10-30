@@ -44,7 +44,6 @@ export function CategoriesScreen({categoryId}) {
 
   return (
     <View>
-      <Text>Category Details:</Text>
       {loading ? (
         <ActivityIndicator size="large" color="#0000ff" />
       ) : error ? (
