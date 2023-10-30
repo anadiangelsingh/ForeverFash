@@ -7,18 +7,20 @@ import {
   ScrollView,
   Pressable,
 } from 'react-native';
-import {CategoriesScreen} from '../../Screens/CategoriesScreen';
+import {Categories} from '../store/Categories';
 
 function Cat({source, onPress, catName, categoryId}) {
   return (
     <TouchableOpacity onPress={onPress}>
-      <ScrollView style={styles.container}>
+      <View style={styles.text}>
         <View style={styles.imageBackground}>
           <Image style={styles.imageButton} source={{uri: source}} />
         </View>
-        <CategoriesScreen style={styles.text} categoryId={categoryId} />
+        {/* <CategoriesScreen style={styles.text} categoryId={categoryId} /> */}
+        <Categories categoryId={categoryId} />
+
         <Text>{catName}</Text>
-      </ScrollView>
+      </View>
     </TouchableOpacity>
   );
 }
@@ -43,5 +45,7 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: 5,
+    alignContent: 'center',
+    alignItems: 'center',
   },
 });

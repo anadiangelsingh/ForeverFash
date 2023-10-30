@@ -1,5 +1,4 @@
 import {Dimensions, View, StyleSheet, TextInput} from 'react-native';
-import Header from '../Components/Header';
 import SubHeader from '../Components/SubHeader';
 import {SafeAreaView} from 'react-native-safe-area-context';
 //const {View, TextInput, StyleSheet} = require('react-native');

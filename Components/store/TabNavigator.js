@@ -1,13 +1,11 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import MainScreen from '../../Screens/MainScreen';
-import WishlistScreen from '../../Screens/WishlistScreen';
 import FavouriteScreen from '../../Screens/FavouriteScreen';
 import ProfileScreen from '../../Screens/ProfileScreen';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {View} from 'react-native';
-import CategoriesScreen from '../../Screens/CategoriesScreen';
 import HomeScreen from '../../Screens/HomeScreen';
+import WishlistScreen from '../../Screens/WishlistScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,12 +14,12 @@ const CustomTabBar = ({state, descriptors, navigation}) => {
     <View
       style={{
         backgroundColor: 'black', // Set the background color to black
-        borderTopLeftRadius: 30, // Rounded top-left corner
-        borderTopRightRadius: 30, // Rounded top-right corner
+        borderTopLeftRadius: 25, // Rounded top-left corner
+        borderTopRightRadius: 25, // Rounded top-right corner
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
-        height: 75, // Adjust the height as needed
+        height: 80, // Adjust the height as needed
       }}>
       {state.routes.map((route, index) => {
         const {options} = descriptors[route.key];
@@ -70,25 +68,26 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Wishlist"
-        component={MainScreen}
+        name="Favourites"
+        component={FavouriteScreen}
         options={{
-          tabBarLabel: 'Wishlist',
-          tabBarIconName: 'star', // Customize icon name
+          tabBarLabel: 'Categories',
+          tabBarIconName: 'favorite', // Customize icon name
           showLabel: false,
           headerShown: false,
         }}
       />
       <Tab.Screen
-        name="Favourites"
-        component={FavouriteScreen}
+        name="Wishlist"
+        component={WishlistScreen}
         options={{
-          tabBarLabel: 'Categories',
-          tabBarIconName: 'star', // Customize icon name
+          tabBarLabel: 'Wishlist',
+          tabBarIconName: 'bookmark', // Customize icon name
           showLabel: false,
           headerShown: false,
         }}
       />
+
       <Tab.Screen
         name="Profile"
         component={ProfileScreen}
