@@ -6,6 +6,7 @@ import FavouriteScreen from '../../Screens/FavouriteScreen';
 import ProfileScreen from '../../Screens/ProfileScreen';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {View} from 'react-native';
+import CategoriesScreen from '../../Screens/CategoriesScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -72,16 +73,16 @@ const TabNavigator = () => {
         component={WishlistScreen}
         options={{
           tabBarLabel: 'Wishlist',
-          tabBarIconName: 'heart', // Customize icon name
+          tabBarIconName: 'star', // Customize icon name
           showLabel: false,
           headerShown: false,
         }}
       />
       <Tab.Screen
-        name="Favourite"
+        name="Favourites"
         component={FavouriteScreen}
         options={{
-          tabBarLabel: 'Favourite',
+          tabBarLabel: 'Categories',
           tabBarIconName: 'star', // Customize icon name
           showLabel: false,
           headerShown: false,
