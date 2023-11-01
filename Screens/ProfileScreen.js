@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import {CategoriesScreen} from './CategoriesScreen';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {Categories} from '../Components/store/Categories';
+import {Categories} from '../components/store/Categories';
 
 function ProfileScreen() {
   // const categoryId = 'Men'; // Replace with the actual category ID you want to fetch

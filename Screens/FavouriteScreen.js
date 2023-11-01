@@ -1,7 +1,7 @@
 // HomeScreen.js
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import {Categories} from '../Components/store/Categories';
+import {Categories} from '../components/store/Categories';
 
 function FavouriteScreen() {
   return (
