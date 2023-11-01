@@ -1,10 +1,10 @@
 import {Dimensions, View, StyleSheet, TextInput} from 'react-native';
-import SubHeader from '../Components/SubHeader';
+import SubHeader from '../components/SubHeader';
 import {SafeAreaView} from 'react-native-safe-area-context';
 //const {View, TextInput, StyleSheet} = require('react-native');
-import IconButton from '../Components/ui/Icon';
+import IconButton from '../components/ui/Icon';
 
-function HomeScreen() {
+function HomeScreen(navigation) {
   const screenHeight = Dimensions.get('window').height;
   const topSpacePercentage = 0;
   const topSpace = (screenHeight * topSpacePercentage) / 100;
@@ -23,7 +23,7 @@ function HomeScreen() {
             <IconButton name="filter" size={25} />
           </View>
         </View>
-        <SubHeader />
+        <SubHeader navigation={navigation} />
       </View>
     </SafeAreaView>
   );

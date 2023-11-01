@@ -1,13 +1,23 @@
 import {View, StyleSheet} from 'react-native';
 import Cat from './ui/Cat';
-import IconButton from './ui/Icon';
-import {ScrollView} from 'react-native-gesture-handler';
-import {CategoriesScreen} from '../Screens/CategoriesScreen';
+import {useNavigation} from '@react-navigation/native'; // Import useNavigation
+
+import CategoriesScreen from '../screens/CategoriesScreen';
+
+import WishlistScreen from '../screens/WishlistScreen';
 
 function SubHeader() {
+  const navigation = useNavigation(); // Initialize navigation
+
+  // function pressHandler(pressType) {
+  //   switch (pressType) {
+  //     case 'ALL':
+  //       navigation.navigate('CategoriesScreen');
+  //       break;
+  //   }
+  // }
   return (
     <View style={styles.container}>
-      {/* <CategoriesScreen /> */}
       <Cat
         source="https://img.icons8.com/?size=30&id=HZ5SrBVYXYO0&format=png"
         onPress={() => console.log('Image pressed!')}
@@ -15,7 +25,7 @@ function SubHeader() {
       />
       <Cat
         source="https://img.icons8.com/?size=48&id=17379&format=png"
-        onPress={() => console.log('Image pressed!')}
+        // onPress={pressHandler.bind(this, 'ALL')}
         categoryId="Women"
       />
       <Cat

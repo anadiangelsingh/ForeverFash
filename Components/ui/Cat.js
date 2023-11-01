@@ -1,12 +1,4 @@
-import {
-  View,
-  TouchableOpacity,
-  Image,
-  StyleSheet,
-  Text,
-  ScrollView,
-  Pressable,
-} from 'react-native';
+import {View, TouchableOpacity, Image, StyleSheet, Text} from 'react-native';
 import {Categories} from '../store/Categories';
 
 function Cat({source, onPress, catName, categoryId}) {
@@ -16,7 +8,6 @@ function Cat({source, onPress, catName, categoryId}) {
         <View style={styles.imageBackground}>
           <Image style={styles.imageButton} source={{uri: source}} />
         </View>
-        {/* <CategoriesScreen style={styles.text} categoryId={categoryId} /> */}
         <Categories categoryId={categoryId} />
 
         <Text>{catName}</Text>
