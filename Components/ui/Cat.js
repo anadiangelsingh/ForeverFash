@@ -1,37 +1,35 @@
-import {View, TouchableOpacity, Image, StyleSheet, Text} from 'react-native';
+import {
+  View,
+  TouchableOpacity,
+  Image,
+  StyleSheet,
+  Text,
+  ScrollView,
+  Pressable,
+} from 'react-native';
+import {Categories} from '../store/Categories';
 
-function Cat({source, onPress, catName}) {
+function Cat({source, onPress, catName, categoryId}) {
   return (
-    <View style={styles.container}>
-      <View style={styles.imageBackground}>
-        <Image style={styles.imageButton} source={{uri: source}} />
+    <TouchableOpacity onPress={onPress}>
+      <View style={styles.text}>
+        <View style={styles.imageBackground}>
+          <Image style={styles.imageButton} source={{uri: source}} />
+        </View>
+        {/* <CategoriesScreen style={styles.text} categoryId={categoryId} /> */}
+        <Categories categoryId={categoryId} />
+
+        <Text>{catName}</Text>
       </View>
-      <Text style={styles.text}>{catName}</Text>
-    </View>
+    </TouchableOpacity>
   );
 }
-
-//import {View, StyleSheet, Image, Text} from 'react-native';
-
-import IconButton from './Icon';
-// function Cat({source}){
-//     return (<View>
-
-//     <View style={style.imageBackground}>
-//     <Image style={style.imageButton}
-//      source={{uri:source}}/>
-//     </View>
-
-//     </View>)
-// }
-
-// Component added made pressable
 
 export default Cat;
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
+    flexDirection: 'row',
   },
 
   imageButton: {
@@ -47,5 +45,7 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: 5,
+    alignContent: 'center',
+    alignItems: 'center',
   },
 });
