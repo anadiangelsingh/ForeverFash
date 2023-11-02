@@ -1,11 +1,18 @@
 import {View, TouchableOpacity, Image, StyleSheet, Text} from 'react-native';
 import {Categories} from '../store/Categories';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-function Cat({source, onPress, catName, categoryId}) {
+function Cat({iconName, onPress, catName, categoryId, source}) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.text}>
         <View style={styles.imageBackground}>
+          {/* <MaterialIcons
+            name={iconName}
+            size={40} // Adjust icon size as needed
+            onPress={onPress}
+            style={{padding: 10}}
+          /> */}
           <Image style={styles.imageButton} source={{uri: source}} />
         </View>
         <Categories categoryId={categoryId} />

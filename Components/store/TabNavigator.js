@@ -19,7 +19,7 @@ const CustomTabBar = ({state, descriptors, navigation}) => {
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
-        height: 80, // Adjust the height as needed
+        height: 90, // Adjust the height as needed
       }}>
       {state.routes.map((route, index) => {
         const {options} = descriptors[route.key];
@@ -98,6 +98,16 @@ const TabNavigator = () => {
           headerShown: false,
         }}
       />
+      {/* <Tab.Screen
+        name="CategoriesScreen"
+        component={CategoriesScreen}
+        // options={{
+        //   tabBarLabel: 'Profile',
+        //   tabBarIconName: 'person', // Customize icon name
+        //   showLabel: false,
+        //   headerShown: false,
+        // }}
+      /> */}
     </Tab.Navigator>
   );
 };

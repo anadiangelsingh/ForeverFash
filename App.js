@@ -47,6 +47,7 @@ import AuthContextProvider from './components/store/auth-context';
 import IconButton from './components/ui/IconButton';
 import HomeScreen from './screens/HomeScreen';
 import TabNavigator from './components/store/TabNavigator';
+import CategoriesScreen from './screens/CategoriesScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -64,45 +65,51 @@ function AuthStack() {
   );
 }
 
-// function AuthenticatedStack() {
-//   const authCtx = useContext(AuthContext);
+function AuthenticatedStack() {
+  const authCtx = useContext(AuthContext);
 
-//   return (
-//     <Stack.Navigator
-//       screenOptions={{
-//         headerStyle: {},
-//         headerTintColor: 'white',
-//         contentStyle: {},
-//         headerShown: false,
-//       }}>
-//       <Stack.Screen
-//         name=" "
-//         component={HomeScreen}
-//         options={{
-//           headerRight: ({tintColor}) => (
-//             <IconButton
-//               icon="exit"
-//               color={tintColor}
-//               size={24}
-//               onPress={authCtx.logout}
-//             />
-//           ),
-//         }}
-//       />
-//     </Stack.Navigator>
-//   );
-// }
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {},
+        headerTintColor: '#511010',
+        contdentStyle: {},
+        headerShown: false,
+      }}>
+      {/* <TabNavigator /> */}
+      <Stack.Screen
+        name=" "
+        component={TabNavigator}
+        options={
+          {
+            // headerRight: ({tintColor}) => (
+            //   <IconButton
+            //     icon="exit"
+            //     color={tintColor}
+            //     size={24}
+            //     onPress={authCtx.logout}
+            //   />
+            // ),
+          }
+        }
+      />
+      <Stack.Screen name="WelcomeScreen" component={CategoriesScreen} />
+    </Stack.Navigator>
+  );
+}
 
 function Navigation() {
   const authCtx = useContext(AuthContext);
 
   return (
     <NavigationContainer>
-      {/* <AuthenticatedStack /> */}
-      <TabNavigator />
+      <AuthenticatedStack />
+      {/* <TabNavigator /> */}
+      {/* {<TabNavigator /> && <AuthenticatedStack />} */}
 
       {/* {authCtx.isAuthenticated && <TabNavigator />} */}
       {/* {!authCtx.isAuthenticated && <AuthStack />} */}
+      {/* {authCtx.isAuthenticated && <AuthenticatedStack />} */}
     </NavigationContainer>
   );
 }
