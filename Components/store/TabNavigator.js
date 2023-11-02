@@ -98,16 +98,6 @@ const TabNavigator = () => {
           headerShown: false,
         }}
       />
-      {/* <Tab.Screen
-        name="CategoriesScreen"
-        component={CategoriesScreen}
-        // options={{
-        //   tabBarLabel: 'Profile',
-        //   tabBarIconName: 'person', // Customize icon name
-        //   showLabel: false,
-        //   headerShown: false,
-        // }}
-      /> */}
     </Tab.Navigator>
   );
 };

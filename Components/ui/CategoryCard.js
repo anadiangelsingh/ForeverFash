@@ -1,56 +1,66 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, Image, StyleSheet} from 'react-native';
+import {Categories} from '../store/Categories';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 
-function CategoryCard({onPress, itemDesc, imageSource, itemPrice, addPress}) {
-  const handleIconClick = () => {
-    // Add  click handling logic here
-    console.log('Icon clicked');
-  };
+function CategoryCard({onPress, imageSource, OfferDesc, categoryId}) {
   return (
     <View>
-      <TouchableOpacity onPress={onPress} style={styles.cardContainer}>
-        <Image source={imageSource} style={styles.cardImage} />
-      </TouchableOpacity>
-      <View style={styles.itemDescStyle}>
-        <Text>{itemDesc}</Text>
+      <TouchableOpacity onPress={onPress}>
+        <View style={styles.cardContainer}>
+          <View
+            style={{
+              flex: 1,
+              alignItems: 'flex-start',
+            }}>
+            <Image source={imageSource} style={styles.cardImage} />
+          </View>
 
-        <Icons
-          name="add-shopping-cart"
-          size={25} // Adjust icon size as needed
-          onPress={handleIconClick}
-          color="#5a5959"
-          style={{marginLeft: 65}}
-        />
-      </View>
-      <View style={styles.itemPriceStyle}>
-        <Text style={styles.cardTitle}>$ {itemPrice}</Text>
-      </View>
+          <View
+            style={{
+              flex: 3,
+              alignItems: 'flex-start',
+              justifyContent: 'flex-start',
+            }}>
+            <Text style={styles.textStyle}>
+              <Categories categoryId={categoryId} />
+            </Text>
+          </View>
+          <Icons
+            name="keyboard-arrow-right"
+            size={40} // Adjust icon size as needed
+            style={{padding: 0, opacity: 0.5}}
+          />
+        </View>
+      </TouchableOpacity>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   cardContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    borderRadius: 10, // Reduced the border radius for a softer look
+    borderWidth: 1, // Reduced the border width
+    margin: 10, // Margin around the card
+    borderColor: 'rgba(0, 0, 0, 0.1)', // Slight gray border
     backgroundColor: 'white',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: 'rgba(0, 0, 0, 0.1)',
-
-    margin: 15,
+    padding: 30, // Increased padding for more space
     shadowColor: '#000',
-
+    justifyContent: 'center',
+    alignItems: 'center',
     shadowOffset: {
       width: 0,
       height: 2,
     },
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.2, // Added a subtle drop shadow
     shadowRadius: 2,
-    elevation: 2,
+    elevation: 2, // Android shadow
   },
   cardImage: {
-    width: 160, // Adjust the width of the image
-    height: 220, // Adjust the height of the image
+    width: 50, // Adjust the width of the image
+    height: 50, // Adjust the height of the image
     resizeMode: 'cover',
     borderRadius: 10,
   },
@@ -59,13 +69,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginTop: 8,
   },
-  itemDescStyle: {
-    flex: 1,
-    marginLeft: 15,
-    flexDirection: 'row',
-  },
-  itemPriceStyle: {
-    marginLeft: 15,
+  textStyle: {
+    fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontSize: 25,
   },
 });
 

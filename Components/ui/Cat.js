@@ -16,7 +16,7 @@ function Cat({iconName, onPress, catName, categoryId, source}) {
           <Image style={styles.imageButton} source={{uri: source}} />
         </View>
         <Categories categoryId={categoryId} />
-
+        {/* <Text>{categoryId}</Text> */}
         <Text>{catName}</Text>
       </View>
     </TouchableOpacity>

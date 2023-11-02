@@ -12,14 +12,30 @@ import IconButton from '../components/ui/Icon';
 import CategoryTile from '../components/ui/CategoryTile';
 import {Title} from 'react-native-paper';
 import OfferCard from '../components/ui/OfferCard';
+import CategoryCard from '../components/ui/CategoryCard';
+import Cat from '../components/ui/Cat';
+import {Categories} from '../components/store/Categories';
+import Icons from 'react-native-vector-icons/MaterialIcons';
 
-function HomeScreen() {
+function CategoryScreen() {
   const screenHeight = Dimensions.get('window').height;
   const topSpacePercentage = 0;
   const topSpace = (screenHeight * topSpacePercentage) / 100;
 
   return (
     <SafeAreaView style={styles.main}>
+      <View>
+        <View style={styles.header}>
+          <Icons
+            name="keyboard-arrow-left"
+            size={40} // Adjust icon size as needed
+            //onPress={onPress}
+            style={{padding: 0}}
+          />
+          <Text style={styles.textStyle}>Categories</Text>
+        </View>
+      </View>
+
       <ScrollView
         vertical
         contentContainerStyle={{
@@ -27,91 +43,58 @@ function HomeScreen() {
         }}
         showsVerticalScrollIndicator={false}
         className="pt-4">
-        <View style={[{marginTop: topSpace}]}>
-          <View style={styles.header}>
-            <View style={styles.textInput}>
-              <TextInput placeholder="  Search" />
-              <View style={styles.icon}>
-                <IconButton name="search" size={25} />
-              </View>
-            </View>
-            <View style={styles.icon}>
-              <IconButton name="filter" size={25} />
-            </View>
-          </View>
-          {/* Categories Icon */}
-          <SubHeader />
-        </View>
+        <View style={[{marginTop: topSpace}]}></View>
+
         <View>
-          <OfferCard
+          <CategoryCard
             imageSource={{
               uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
-            OfferPercentage="40%"
-            OfferDesc="on all Women's collection"
+            categoryId="Women"
+
             // title="Testing 2"
           />
-          <OfferCard
+          <CategoryCard
             imageSource={{
               uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
-            OfferPercentage="50%"
-            OfferDesc="on all Kids's collection"
+            categoryId="Men"
             // title="Testing 2"
           />
-        </View>
-        <View style={styles.itemDescStyle}>
-          <Title>New Items</Title>
-        </View>
-        <View style={styles.cardStyle}>
-          <CategoryTile
+          <CategoryCard
             imageSource={{
               uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
-            itemDesc="Stylish Suit"
-            itemPrice="87.00"
-            onPress={() => console.log('Card pressed!')}
+            categoryId="Kids"
+            // title="Testing 2"
           />
-          <CategoryTile
+          <CategoryCard
             imageSource={{
               uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
-            itemDesc="New Shirt"
-            itemPrice="72.00"
+            categoryId="Accessories"
+            // title="Testing 2"
           />
-        </View>
-        <View style={styles.cardStyle}>
-          <CategoryTile
+          <CategoryCard
             imageSource={{
               uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
-            itemDesc="Stylish Suit"
-            itemPrice="87.00"
-            onPress={() => console.log('Card pressed!')}
+            categoryId="Bags"
+            // title="Testing 2"
           />
-          <CategoryTile
+          <CategoryCard
             imageSource={{
               uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
-            itemDesc="New Shirt"
-            itemPrice="72.00"
+            categoryId="Footwear"
+            // title="Testing 2"
           />
-        </View>
-        <View style={styles.cardStyle}>
-          <CategoryTile
+          <CategoryCard
             imageSource={{
               uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
-            itemDesc="Stylish Suit"
-            itemPrice="87.00"
-            onPress={() => console.log('Card pressed!')}
-          />
-          <CategoryTile
-            imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-            }}
-            itemDesc="New Shirt"
-            itemPrice="72.00"
+            categoryId="Sports"
+            // title="Testing 2"
           />
         </View>
       </ScrollView>
@@ -119,7 +102,7 @@ function HomeScreen() {
   );
 }
 
-export default HomeScreen;
+export default CategoryScreen;
 
 const styles = StyleSheet.create({
   main: {
@@ -129,8 +112,9 @@ const styles = StyleSheet.create({
   },
   header: {
     flexDirection: 'row',
-    margin: 2,
     padding: 4,
+    // alignSelf: 'center',
+    alignContent: 'flex-start',
   },
   textInput: {
     flexDirection: 'row',
@@ -151,5 +135,11 @@ const styles = StyleSheet.create({
   },
   itemDescStyle: {
     marginLeft: 15,
+  },
+  textStyle: {
+    //fontWeight: 'bold',
+    fontStyle: 'normal',
+    fontSize: 25,
+    marginLeft: 85,
   },
 });
