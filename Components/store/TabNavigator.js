@@ -6,6 +6,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {View} from 'react-native';
 import HomeScreen from '../../screens/HomeScreen';
 import WishlistScreen from '../../screens/WishlistScreen';
+import CategoriesScreen from '../../screens/CategoriesScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -98,6 +99,16 @@ const TabNavigator = () => {
           headerShown: false,
         }}
       />
+      {/* <Tab.Screen
+        name="CategoriesScreen"
+        component={CategoriesScreen}
+        // options={{
+        //   tabBarLabel: 'Profile',
+        //   tabBarIconName: 'person', // Customize icon name
+        //   showLabel: false,
+        //   headerShown: false,
+        // }}
+      /> */}
     </Tab.Navigator>
   );
 };

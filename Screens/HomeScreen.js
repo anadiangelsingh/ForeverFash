@@ -1,30 +1,86 @@
-import {Dimensions, View, StyleSheet, TextInput} from 'react-native';
+import {
+  Dimensions,
+  View,
+  StyleSheet,
+  TextInput,
+  Text,
+  ScrollView,
+} from 'react-native';
 import SubHeader from '../components/SubHeader';
 import {SafeAreaView} from 'react-native-safe-area-context';
-//const {View, TextInput, StyleSheet} = require('react-native');
 import IconButton from '../components/ui/Icon';
+import Cat from '../components/ui/Cat';
+import CategoryCard from '../components/ui/CategoryCard';
+import {Title} from 'react-native-paper';
+import OfferCard from '../components/ui/OfferCard';
 
-function HomeScreen(navigation) {
+function HomeScreen() {
   const screenHeight = Dimensions.get('window').height;
   const topSpacePercentage = 0;
   const topSpace = (screenHeight * topSpacePercentage) / 100;
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={[styles.container, {marginTop: topSpace}]}>
-        <View style={styles.header}>
-          <View style={styles.textInput}>
-            <TextInput placeholder="  Search" />
+    <SafeAreaView style={styles.main}>
+      <ScrollView
+        vertical
+        contentContainerStyle={{
+          paddingVertical: 1,
+        }}
+        showsVerticalScrollIndicator={false}
+        className="pt-4">
+        <View style={[{marginTop: topSpace}]}>
+          <View style={styles.header}>
+            <View style={styles.textInput}>
+              <TextInput placeholder="  Search" />
+              <View style={styles.icon}>
+                <IconButton name="search" size={25} />
+              </View>
+            </View>
             <View style={styles.icon}>
-              <IconButton name="search" size={25} />
+              <IconButton name="filter" size={25} />
             </View>
           </View>
-          <View style={styles.icon}>
-            <IconButton name="filter" size={25} />
-          </View>
+          {/* Categories Icon */}
+          <SubHeader />
         </View>
-        <SubHeader navigation={navigation} />
-      </View>
+        <View>
+          <OfferCard
+            imageSource={{
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+            }}
+            OfferPercentage="40%"
+            OfferDesc="on all Women's collection"
+            // title="Testing 2"
+          />
+          <OfferCard
+            imageSource={{
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+            }}
+            OfferPercentage="50%"
+            OfferDesc="on all Kids's collection"
+            // title="Testing 2"
+          />
+        </View>
+        <View>
+          <Title>New Items</Title>
+        </View>
+        <View style={styles.cardStyle}>
+          <CategoryCard
+            imageSource={{
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+            }}
+            itemDesc="Stylish Suit"
+            itemPrice="87.00"
+          />
+          <CategoryCard
+            imageSource={{
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+            }}
+            itemDesc="New Shirt"
+            itemPrice="72.00"
+          />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -32,6 +88,11 @@ function HomeScreen(navigation) {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
+  main: {
+    flex: 1,
+    justifyContent: 'center',
+    margin: 8,
+  },
   header: {
     flexDirection: 'row',
     margin: 2,
@@ -46,7 +107,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   icon: {
-    margin: 6,
-    padding: 4,
+    margin: 9,
+    padding: 5,
+  },
+
+  cardStyle: {
+    flex: 1,
+    flexDirection: 'row',
   },
 });
