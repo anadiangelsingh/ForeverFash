@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
-import {CategoriesScreen} from './CategoriesScreen';
+import {CategoriesScreen} from './CategoryScreen';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {Categories} from '../components/store/Categories';
 
@@ -10,7 +10,7 @@ function ProfileScreen() {
     <SafeAreaView>
       <ScrollView>
         <View>
-          <Text>tdhdh</Text>
+          <Text>Profile Screen</Text>
           {/* <CategoriesScreen style={styles.text} categoryId="Sports" /> */}
           <Categories categoryId="Bags" />
         </View>

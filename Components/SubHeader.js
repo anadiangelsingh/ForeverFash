@@ -2,23 +2,27 @@ import {View, StyleSheet, ScrollView} from 'react-native';
 import Cat from './ui/Cat';
 import {useNavigation} from '@react-navigation/native'; // Import useNavigation
 
-import CategoriesScreen from '../screens/CategoriesScreen';
+import CategoryScreen from '../screens/CategoryScreen';
 
 import WishlistScreen from '../screens/WishlistScreen';
 import WelcomeScreen from '../screens/WelcomeScreen';
+import FavouriteScreen from '../screens/FavouriteScreen';
 
 function SubHeader() {
   const navigation = useNavigation(); // Initialize navigation
 
-  function pressHandler(pressType) {
+  const handlePress = pressType => {
     switch (pressType) {
-      case 'ALL':
-        navigation.navigate('CategoriesScreen');
+      case 'All':
+        navigation.navigate('CategoryScreen');
+        console.log('Pressed');
         break;
-    }
-  }
-  const handlePress = () => {
-    navigation.navigate('WelcomeScreen');
+
+      // case 'Women':
+      //   navigation.navigate('WishlistScreen');
+      //   console.log('Pressed');
+      //   break;
+    } // navigation.navigate('WelcomeScreen');
   };
   return (
     <>
@@ -31,7 +35,7 @@ function SubHeader() {
         className="pt-4">
         <Cat
           source="/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Icons/5791999.webp"
-          onPress={() => console.log('Image pressed!')}
+          onPress={handlePress.bind(this, 'All')}
           catName="All"
         />
         <Cat
@@ -41,7 +45,7 @@ function SubHeader() {
         />
         <Cat
           source="/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Icons/3259155.webp"
-          onPress={handlePress}
+          onPress={handlePress.bind(this, 'Women')}
           categoryId="Women"
         />
         <Cat

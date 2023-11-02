@@ -47,7 +47,8 @@ import AuthContextProvider from './components/store/auth-context';
 import IconButton from './components/ui/IconButton';
 import HomeScreen from './screens/HomeScreen';
 import TabNavigator from './components/store/TabNavigator';
-import CategoriesScreen from './screens/CategoriesScreen';
+import CategoryScreen from './screens/CategoryScreen';
+import WishlistScreen from './screens/WishlistScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -56,7 +57,7 @@ function AuthStack() {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {backgroundColor: Colors.primary500},
-        headerTintColor: 'white',
+        headerTintColor: '#100909',
         contentStyle: {backgroundColor: Colors.primary100},
       }}>
       <Stack.Screen name="Login" component={LoginScreen} />
@@ -72,7 +73,7 @@ function AuthenticatedStack() {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {},
-        headerTintColor: '#511010',
+        headerTintColor: '#000000',
         contdentStyle: {},
         headerShown: false,
       }}>
@@ -93,7 +94,8 @@ function AuthenticatedStack() {
           }
         }
       />
-      <Stack.Screen name="WelcomeScreen" component={CategoriesScreen} />
+      <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
+      {/* <Stack.Screen name="WishlistScreen" component={WishlistScreen} /> */}
     </Stack.Navigator>
   );
 }
@@ -105,11 +107,9 @@ function Navigation() {
     <NavigationContainer>
       <AuthenticatedStack />
       {/* <TabNavigator /> */}
-      {/* {<TabNavigator /> && <AuthenticatedStack />} */}
 
-      {/* {authCtx.isAuthenticated && <TabNavigator />} */}
-      {/* {!authCtx.isAuthenticated && <AuthStack />} */}
-      {/* {authCtx.isAuthenticated && <AuthenticatedStack />} */}
+      {/* {!authCtx.isAuthenticated && <AuthStack />}
+      {authCtx.isAuthenticated && <AuthenticatedStack />} */}
     </NavigationContainer>
   );
 }
