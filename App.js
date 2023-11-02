@@ -72,24 +72,26 @@ function AuthenticatedStack() {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {},
-        headerTintColor: 'white',
-        contentStyle: {},
+        headerTintColor: '#511010',
+        contdentStyle: {},
         headerShown: false,
       }}>
       {/* <TabNavigator /> */}
       <Stack.Screen
         name=" "
         component={TabNavigator}
-        options={{
-          headerRight: ({tintColor}) => (
-            <IconButton
-              icon="exit"
-              color={tintColor}
-              size={24}
-              onPress={authCtx.logout}
-            />
-          ),
-        }}
+        options={
+          {
+            // headerRight: ({tintColor}) => (
+            //   <IconButton
+            //     icon="exit"
+            //     color={tintColor}
+            //     size={24}
+            //     onPress={authCtx.logout}
+            //   />
+            // ),
+          }
+        }
       />
       <Stack.Screen name="WelcomeScreen" component={CategoriesScreen} />
     </Stack.Navigator>

@@ -1,7 +1,12 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, Image, StyleSheet} from 'react-native';
+import Icons from 'react-native-vector-icons/MaterialIcons';
 
-function CategoryCard({onPress, itemDesc, imageSource, itemPrice}) {
+function CategoryCard({onPress, itemDesc, imageSource, itemPrice, addPress}) {
+  const handleIconClick = () => {
+    // Add  click handling logic here
+    console.log('Icon clicked');
+  };
   return (
     <View>
       <TouchableOpacity onPress={onPress} style={styles.cardContainer}>
@@ -9,7 +14,17 @@ function CategoryCard({onPress, itemDesc, imageSource, itemPrice}) {
       </TouchableOpacity>
       <View style={styles.itemDescStyle}>
         <Text>{itemDesc}</Text>
-        <Text style={styles.cardTitle}>${itemPrice}</Text>
+
+        <Icons
+          name="add-shopping-cart"
+          size={25} // Adjust icon size as needed
+          onPress={handleIconClick}
+          color="#5a5959"
+          style={{marginLeft: 65}}
+        />
+      </View>
+      <View style={styles.itemPriceStyle}>
+        <Text style={styles.cardTitle}>$ {itemPrice}</Text>
       </View>
     </View>
   );
@@ -45,6 +60,11 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   itemDescStyle: {
+    flex: 1,
+    marginLeft: 15,
+    flexDirection: 'row',
+  },
+  itemPriceStyle: {
     marginLeft: 15,
   },
 });

@@ -6,7 +6,6 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {View} from 'react-native';
 import HomeScreen from '../../screens/HomeScreen';
 import WishlistScreen from '../../screens/WishlistScreen';
-import CategoriesScreen from '../../screens/CategoriesScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,7 +19,7 @@ const CustomTabBar = ({state, descriptors, navigation}) => {
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
-        height: 80, // Adjust the height as needed
+        height: 90, // Adjust the height as needed
       }}>
       {state.routes.map((route, index) => {
         const {options} = descriptors[route.key];

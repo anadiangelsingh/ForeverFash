@@ -9,7 +9,6 @@ import {
 import SubHeader from '../components/SubHeader';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import IconButton from '../components/ui/Icon';
-import Cat from '../components/ui/Cat';
 import CategoryCard from '../components/ui/CategoryCard';
 import {Title} from 'react-native-paper';
 import OfferCard from '../components/ui/OfferCard';
@@ -61,7 +60,7 @@ function HomeScreen() {
             // title="Testing 2"
           />
         </View>
-        <View>
+        <View style={styles.itemDescStyle}>
           <Title>New Items</Title>
         </View>
         <View style={styles.cardStyle}>
@@ -71,6 +70,41 @@ function HomeScreen() {
             }}
             itemDesc="Stylish Suit"
             itemPrice="87.00"
+            onPress={() => console.log('Card pressed!')}
+          />
+          <CategoryCard
+            imageSource={{
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+            }}
+            itemDesc="New Shirt"
+            itemPrice="72.00"
+          />
+        </View>
+        <View style={styles.cardStyle}>
+          <CategoryCard
+            imageSource={{
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+            }}
+            itemDesc="Stylish Suit"
+            itemPrice="87.00"
+            onPress={() => console.log('Card pressed!')}
+          />
+          <CategoryCard
+            imageSource={{
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+            }}
+            itemDesc="New Shirt"
+            itemPrice="72.00"
+          />
+        </View>
+        <View style={styles.cardStyle}>
+          <CategoryCard
+            imageSource={{
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+            }}
+            itemDesc="Stylish Suit"
+            itemPrice="87.00"
+            onPress={() => console.log('Card pressed!')}
           />
           <CategoryCard
             imageSource={{
@@ -114,5 +148,8 @@ const styles = StyleSheet.create({
   cardStyle: {
     flex: 1,
     flexDirection: 'row',
+  },
+  itemDescStyle: {
+    marginLeft: 15,
   },
 });
