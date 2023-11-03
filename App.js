@@ -94,8 +94,38 @@ function AuthenticatedStack() {
           }
         }
       />
-      <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
+      <Stack.Screen
+        name="CategoryScreen"
+        component={CategoryScreen}
+        options={{
+          headerShown: true,
+          //   headerRight: ({tintColor}) => (
+          //     // <IconButton
+          //     //   icon="exit"
+          //     //   color={tintColor}
+          //     //   size={24}
+          //     //   onPress={authCtx.logout}
+          //     // />
+          //   ),
+        }}
+      />
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
       {/* <Stack.Screen name="WishlistScreen" component={WishlistScreen} /> */}
+    </Stack.Navigator>
+  );
+}
+
+function AuthenticatedStack1() {
+  const authCtx = useContext(AuthContext);
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {},
+        headerTintColor: '#000000',
+        contdentStyle: {},
+        headerShown: false,
+      }}>
+      <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
     </Stack.Navigator>
   );
 }
@@ -106,6 +136,7 @@ function Navigation() {
   return (
     <NavigationContainer>
       <AuthenticatedStack />
+      {/* <AuthenticatedStack1 /> */}
       {/* <TabNavigator /> */}
 
       {/* {!authCtx.isAuthenticated && <AuthStack />}
