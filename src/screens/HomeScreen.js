@@ -45,7 +45,7 @@ function HomeScreen() {
         <View>
           <OfferCard
             imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
             OfferPercentage="40%"
             OfferDesc="on all Women's collection"
@@ -53,7 +53,7 @@ function HomeScreen() {
           />
           <OfferCard
             imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
             OfferPercentage="50%"
             OfferDesc="on all Kids's collection"
@@ -66,7 +66,7 @@ function HomeScreen() {
         <View style={styles.cardStyle}>
           <CategoryTile
             imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
             itemDesc="Stylish Suit"
             itemPrice="87.00"
@@ -74,7 +74,7 @@ function HomeScreen() {
           />
           <CategoryTile
             imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
             itemDesc="New Shirt"
             itemPrice="72.00"
@@ -83,7 +83,7 @@ function HomeScreen() {
         <View style={styles.cardStyle}>
           <CategoryTile
             imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
             itemDesc="Stylish Suit"
             itemPrice="87.00"
@@ -91,7 +91,7 @@ function HomeScreen() {
           />
           <CategoryTile
             imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
             itemDesc="New Shirt"
             itemPrice="72.00"
@@ -100,7 +100,7 @@ function HomeScreen() {
         <View style={styles.cardStyle}>
           <CategoryTile
             imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
             itemDesc="Stylish Suit"
             itemPrice="87.00"
@@ -108,7 +108,7 @@ function HomeScreen() {
           />
           <CategoryTile
             imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
+              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
             }}
             itemDesc="New Shirt"
             itemPrice="72.00"
