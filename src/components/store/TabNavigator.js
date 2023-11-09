@@ -19,7 +19,8 @@ const CustomTabBar = ({state, descriptors, navigation}) => {
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
-        height: 90, // Adjust the height as needed
+        height: 100, // Adjust the height as needed
+        // marginBottom: 20,
       }}>
       {state.routes.map((route, index) => {
         const {options} = descriptors[route.key];

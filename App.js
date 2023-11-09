@@ -38,17 +38,17 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 //import {StatusBar} from 'expo-status-bar';
 
-import LoginScreen from './screens/LoginScreen';
-import SignupScreen from './screens/SignupScreen';
-import WelcomeScreen from './screens/WelcomeScreen';
-import {Colors} from './components/constants/styles';
-import {AuthContext} from './components/store/auth-context';
-import AuthContextProvider from './components/store/auth-context';
-import IconButton from './components/ui/IconButton';
-import HomeScreen from './screens/HomeScreen';
-import TabNavigator from './components/store/TabNavigator';
-import CategoryScreen from './screens/CategoryScreen';
-import WishlistScreen from './screens/WishlistScreen';
+import LoginScreen from './src/screens/LoginScreen';
+import SignupScreen from './src/screens/SignupScreen';
+import WelcomeScreen from './src/screens/WelcomeScreen';
+import {Colors} from './src/components/constants/styles';
+import {AuthContext} from './src/components/store/auth-context';
+import AuthContextProvider from './src/components/store/auth-context';
+import IconButton from './src/components/ui/IconButton';
+import HomeScreen from './src/screens/HomeScreen';
+import TabNavigator from './src/components/store/TabNavigator';
+import CategoryScreen from './src/screens/CategoryScreen';
+import WishlistScreen from './src/screens/WishlistScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -94,8 +94,38 @@ function AuthenticatedStack() {
           }
         }
       />
-      <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
+      <Stack.Screen
+        name="CategoryScreen"
+        component={CategoryScreen}
+        options={{
+          headerShown: true,
+          //   headerRight: ({tintColor}) => (
+          //     // <IconButton
+          //     //   icon="exit"
+          //     //   color={tintColor}
+          //     //   size={24}
+          //     //   onPress={authCtx.logout}
+          //     // />
+          //   ),
+        }}
+      />
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
       {/* <Stack.Screen name="WishlistScreen" component={WishlistScreen} /> */}
+    </Stack.Navigator>
+  );
+}
+
+function AuthenticatedStack1() {
+  const authCtx = useContext(AuthContext);
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {},
+        headerTintColor: '#000000',
+        contdentStyle: {},
+        headerShown: false,
+      }}>
+      <Stack.Screen name="CategoryScreen" component={CategoryScreen} />
     </Stack.Navigator>
   );
 }
@@ -106,6 +136,7 @@ function Navigation() {
   return (
     <NavigationContainer>
       <AuthenticatedStack />
+      {/* <AuthenticatedStack1 /> */}
       {/* <TabNavigator /> */}
 
       {/* {!authCtx.isAuthenticated && <AuthStack />}
