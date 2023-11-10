@@ -30,7 +30,7 @@ function CategoryScreen() {
             uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
           }}
           categoryId="Women"
-
+          // create Women section card
           // title="Testing 2"
         />
         <CategoryCard
