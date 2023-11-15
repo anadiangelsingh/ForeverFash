@@ -44,17 +44,13 @@ function HomeScreen() {
         </View>
         <View>
           <OfferCard
-            imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-            }}
+            imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             OfferPercentage="40%"
             OfferDesc="on all Women's collection"
             // title="Testing 2"
           />
           <OfferCard
-            imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-            }}
+            imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             OfferPercentage="50%"
             OfferDesc="on all Kids's collection"
             // title="Testing 2"
@@ -65,51 +61,39 @@ function HomeScreen() {
         </View>
         <View style={styles.cardStyle}>
           <CategoryTile
-            imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-            }}
+            imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             itemDesc="Stylish Suit"
             itemPrice="87.00"
             onPress={() => console.log('Card pressed!')}
           />
           <CategoryTile
-            imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-            }}
+            imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             itemDesc="New Shirt"
             itemPrice="72.00"
           />
         </View>
         <View style={styles.cardStyle}>
           <CategoryTile
-            imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-            }}
+            imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             itemDesc="Stylish Suit"
             itemPrice="87.00"
             onPress={() => console.log('Card pressed!')}
           />
           <CategoryTile
-            imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-            }}
+            imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             itemDesc="New Shirt"
             itemPrice="72.00"
           />
         </View>
         <View style={styles.cardStyle}>
           <CategoryTile
-            imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-            }}
+            imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             itemDesc="Stylish Suit"
             itemPrice="87.00"
             onPress={() => console.log('Card pressed!')}
           />
           <CategoryTile
-            imageSource={{
-              uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-            }}
+            imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             itemDesc="New Shirt"
             itemPrice="72.00"
           />
