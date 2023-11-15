@@ -34,44 +34,44 @@ function SubHeader() {
         showsHorizontalScrollIndicator={false}
         className="pt-4">
         <Cat
-          source="/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/5791999.webp"
+          source={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/5791999.webp')}
           onPress={handlePress.bind(this, 'All')}
           catName="All"
         />
         <Cat
-          source="/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/3798530.png"
+          source={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/3798530.png')}
           onPress={() => console.log('Image pressed!')}
           categoryId="Men"
         />
         <Cat
-          source="/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/3259155.webp"
+          source={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/3259155.webp')}
           onPress={handlePress.bind(this, 'Women')}
           categoryId="Women"
         />
         <Cat
-          source="/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/4551874.webp"
+          source={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/4551874.webp')}
           onPress={() => console.log('Image pressed!')}
           categoryId="Kids"
         />
 
         <Cat
-          source="/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/4522698.webp"
+          source={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/4522698.webp')}
           onPress={() => console.log('Image pressed!')}
           categoryId="Accessories"
         />
 
         <Cat
-          source="/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/4522696.webp"
+          source={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/4522696.webp')}
           onPress={() => console.log('Image pressed!')}
           categoryId="Bags"
         />
         <Cat
-          source="/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/7332676.webp"
+          source={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/7332676.webp')}
           onPress={() => console.log('Image pressed!')}
           categoryId="Footwear"
         />
         <Cat
-          source="/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/5818789.webp"
+          source={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/5818789.webp')}
           onPress={() => console.log('Image pressed!')}
           categoryId="Sports"
         />

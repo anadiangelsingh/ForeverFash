@@ -26,52 +26,38 @@ function CategoryScreen() {
 
       <View>
         <CategoryCard
-          imageSource={{
-            uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-          }}
+          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
           categoryId="Women"
           // create Women section card
           // title="Testing 2"
         />
         <CategoryCard
-          imageSource={{
-            uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-          }}
+          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
           categoryId="Men"
           // title="Testing 2"
         />
         <CategoryCard
-          imageSource={{
-            uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-          }}
+          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
           categoryId="Kids"
           // title="Testing 2"
         />
         <CategoryCard
-          imageSource={{
-            uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-          }}
+          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
           categoryId="Accessories"
           // title="Testing 2"
         />
         <CategoryCard
-          imageSource={{
-            uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-          }}
+          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
           categoryId="Bags"
           // title="Testing 2"
         />
         <CategoryCard
-          imageSource={{
-            uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-          }}
+          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
           categoryId="Footwear"
           // title="Testing 2"
         />
         <CategoryCard
-          imageSource={{
-            uri: '/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash (1).jpg',
-          }}
+          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
           categoryId="Sports"
           // title="Testing 2"
         />

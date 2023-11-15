@@ -13,7 +13,7 @@ function Cat({iconName, onPress, catName, categoryId, source}) {
             onPress={onPress}
             style={{padding: 10}}
           /> */}
-          <Image style={styles.imageButton} source={{uri: source}} />
+          <Image style={styles.imageButton} source={source} />
         </View>
         <Categories categoryId={categoryId} />
         {/* <Text>{categoryId}</Text> */}
