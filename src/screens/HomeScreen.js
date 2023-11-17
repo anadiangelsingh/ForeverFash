@@ -6,7 +6,7 @@ import {
   Text,
   ScrollView,
 } from 'react-native';
-import SubHeader from '../components/SubHeader';
+import CategoriesSelector from '../components/ui/CategoriesSelector';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import IconButton from '../components/ui/Icon';
 import CategoryTile from '../components/ui/CategoryTile';
@@ -40,7 +40,7 @@ function HomeScreen() {
             </View>
           </View>
           {/* Categories Icon */}
-          <SubHeader />
+          <CategoriesSelector />
         </View>
         <View>
           <OfferCard

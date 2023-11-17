@@ -1,14 +1,8 @@
 import {View, StyleSheet, ScrollView} from 'react-native';
-import Cat from './ui/Cat';
+import Cat from './Cat';
 import {useNavigation} from '@react-navigation/native'; // Import useNavigation
 
-import CategoryScreen from '../screens/CategoryScreen';
-
-import WishlistScreen from '../screens/WishlistScreen';
-import WelcomeScreen from '../screens/WelcomeScreen';
-import FavouriteScreen from '../screens/FavouriteScreen';
-
-function SubHeader() {
+function CategoriesSelector() {
   const navigation = useNavigation(); // Initialize navigation
 
   const handlePress = pressType => {
@@ -17,12 +11,35 @@ function SubHeader() {
         navigation.navigate('CategoryScreen');
         console.log('Pressed');
         break;
-
-      // case 'Women':
-      //   navigation.navigate('WishlistScreen');
-      //   console.log('Pressed');
-      //   break;
-    } // navigation.navigate('WelcomeScreen');
+      case 'Women':
+        navigation.navigate('Women');
+        console.log('Pressed');
+        break;
+      case 'Men':
+        navigation.navigate('Men');
+        console.log('Pressed');
+        break;
+      case 'Kids':
+        navigation.navigate('Kids');
+        console.log('Pressed');
+        break;
+      case 'Accessories':
+        navigation.navigate('Accessories');
+        console.log('Pressed');
+        break;
+      case 'Bags':
+        navigation.navigate('Bags');
+        console.log('Pressed');
+        break;
+      case 'Footwear':
+        navigation.navigate('Footwear');
+        console.log('Pressed');
+        break;
+      case 'Sports':
+        navigation.navigate('Sports');
+        console.log('Pressed');
+        break;
+    }
   };
   return (
     <>
@@ -40,7 +57,7 @@ function SubHeader() {
         />
         <Cat
           source={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/3798530.png')}
-          onPress={() => console.log('Image pressed!')}
+          onPress={handlePress.bind(this, 'Men')}
           categoryId="Men"
         />
         <Cat
@@ -50,29 +67,29 @@ function SubHeader() {
         />
         <Cat
           source={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/4551874.webp')}
-          onPress={() => console.log('Image pressed!')}
+          onPress={handlePress.bind(this, 'Kids')}
           categoryId="Kids"
         />
 
         <Cat
           source={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/4522698.webp')}
-          onPress={() => console.log('Image pressed!')}
+          onPress={handlePress.bind(this, 'Accessories')}
           categoryId="Accessories"
         />
 
         <Cat
           source={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/4522696.webp')}
-          onPress={() => console.log('Image pressed!')}
+          onPress={handlePress.bind(this, 'Bags')}
           categoryId="Bags"
         />
         <Cat
           source={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/7332676.webp')}
-          onPress={() => console.log('Image pressed!')}
+          onPress={handlePress.bind(this, 'Footwear')}
           categoryId="Footwear"
         />
         <Cat
           source={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/5818789.webp')}
-          onPress={() => console.log('Image pressed!')}
+          onPress={handlePress.bind(this, 'Sports')}
           categoryId="Sports"
         />
       </ScrollView>
@@ -80,7 +97,7 @@ function SubHeader() {
   );
 }
 
-export default SubHeader;
+export default CategoriesSelector;
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
