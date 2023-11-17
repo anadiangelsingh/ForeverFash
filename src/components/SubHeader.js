@@ -2,12 +2,6 @@ import {View, StyleSheet, ScrollView} from 'react-native';
 import Cat from './ui/Cat';
 import {useNavigation} from '@react-navigation/native'; // Import useNavigation
 
-import CategoryScreen from '../screens/CategoryScreen';
-
-import WishlistScreen from '../screens/WishlistScreen';
-import WelcomeScreen from '../screens/WelcomeScreen';
-import FavouriteScreen from '../screens/FavouriteScreen';
-
 function SubHeader() {
   const navigation = useNavigation(); // Initialize navigation
 

@@ -12,6 +12,13 @@ import HomeScreen from './src/screens/HomeScreen';
 import TabNavigator from './src/components/store/TabNavigator';
 import CategoryScreen from './src/screens/CategoryScreen';
 import WishlistScreen from './src/screens/WishlistScreen';
+import Women from './src/screens/Sub-Categories/Women';
+import Men from './src/screens/Sub-Categories/Men';
+import Kids from './src/screens/Sub-Categories/Kids';
+import Accessories from './src/screens/Sub-Categories/Accessories';
+import Bags from './src/screens/Sub-Categories/Bags';
+import Footwear from './src/screens/Sub-Categories/Footwear';
+import Sports from './src/screens/Sub-Categories/Sports';
 
 const Stack = createNativeStackNavigator();
 
@@ -57,6 +64,7 @@ function AuthenticatedStack() {
           }
         }
       />
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen
         name="CategoryScreen"
         component={CategoryScreen}
@@ -72,7 +80,55 @@ function AuthenticatedStack() {
           //   ),
         }}
       />
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen
+        name="Women"
+        component={Women}
+        options={{
+          headerShown: true,
+        }}
+      />
+      <Stack.Screen
+        name="Men"
+        component={Men}
+        options={{
+          headerShown: true,
+        }}
+      />
+      <Stack.Screen
+        name="Kids"
+        component={Kids}
+        options={{
+          headerShown: true,
+        }}
+      />
+      <Stack.Screen
+        name="Accessories"
+        component={Accessories}
+        options={{
+          headerShown: true,
+        }}
+      />
+      <Stack.Screen
+        name="Bags"
+        component={Bags}
+        options={{
+          headerShown: true,
+        }}
+      />
+      <Stack.Screen
+        name="Footwear"
+        component={Footwear}
+        options={{
+          headerShown: true,
+        }}
+      />
+      <Stack.Screen
+        name="Sports"
+        component={Sports}
+        options={{
+          headerShown: true,
+        }}
+      />
       {/* <Stack.Screen name="WishlistScreen" component={WishlistScreen} /> */}
     </Stack.Navigator>
   );
@@ -98,10 +154,10 @@ function Navigation() {
 
   return (
     <NavigationContainer>
-      {/* <AuthenticatedStack /> */}
+      <AuthenticatedStack />
 
-      {!authCtx.isAuthenticated && <AuthStack />}
-      {authCtx.isAuthenticated && <AuthenticatedStack />}
+      {/* {!authCtx.isAuthenticated && <AuthStack />}
+      {authCtx.isAuthenticated && <AuthenticatedStack />} */}
     </NavigationContainer>
   );
 }

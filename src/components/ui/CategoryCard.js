@@ -13,18 +13,15 @@ function CategoryCard({onPress, imageSource, OfferDesc, categoryId}) {
               flex: 1,
               alignItems: 'flex-start',
             }}>
-            <Image source={imageSource} style={styles.cardImage} />
+            <Image size="50" source={imageSource} style={styles.cardImage} />
           </View>
 
           <View
             style={{
               flex: 3,
-              alignItems: 'flex-start',
-              justifyContent: 'flex-start',
+              alignItems: 'center',
             }}>
-            <Text style={styles.textStyle}>
-              <Categories categoryId={categoryId} />
-            </Text>
+            <Categories style={styles.textStyle} categoryId={categoryId} />
           </View>
           <Icons
             name="keyboard-arrow-right"
@@ -72,7 +69,7 @@ const styles = StyleSheet.create({
   textStyle: {
     fontWeight: 'bold',
     fontStyle: 'normal',
-    fontSize: 25,
+    fontSize: 90,
   },
 });
 

@@ -6,13 +6,50 @@ import {
   ScrollView,
   Pressable,
 } from 'react-native';
+import {useNavigation} from '@react-navigation/native'; // Import useNavigation
 
 import CategoryCard from '../components/ui/CategoryCard';
+import WomenScreen from './Sub-Categories/Women';
 
 function CategoryScreen() {
   const screenHeight = Dimensions.get('window').height;
   const topSpacePercentage = 0;
   const topSpace = (screenHeight * topSpacePercentage) / 100;
+
+  const navigation = useNavigation(); // Initialize navigation
+
+  const handlePress = pressType => {
+    switch (pressType) {
+      case 'Women':
+        navigation.navigate('Women');
+        console.log('Pressed');
+        break;
+      case 'Men':
+        navigation.navigate('Men');
+        console.log('Pressed');
+        break;
+      case 'Kids':
+        navigation.navigate('Kids');
+        console.log('Pressed');
+        break;
+      case 'Accessories':
+        navigation.navigate('Accessories');
+        console.log('Pressed');
+        break;
+      case 'Bags':
+        navigation.navigate('Bags');
+        console.log('Pressed');
+        break;
+      case 'Footwear':
+        navigation.navigate('Footwear');
+        console.log('Pressed');
+        break;
+      case 'Sports':
+        navigation.navigate('Sports');
+        console.log('Pressed');
+        break;
+    }
+  };
 
   return (
     <ScrollView
@@ -26,41 +63,48 @@ function CategoryScreen() {
 
       <View>
         <CategoryCard
-          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
+          onPress={handlePress.bind(this, 'Women')}
+          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/3259155.webp')}
           categoryId="Women"
           // create Women section card
           // title="Testing 2"
         />
         <CategoryCard
-          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
+          onPress={handlePress.bind(this, 'Men')}
+          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/3798530.png')}
           categoryId="Men"
           // title="Testing 2"
         />
         <CategoryCard
-          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
+          onPress={handlePress.bind(this, 'Kids')}
+          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/4551874.webp')}
           categoryId="Kids"
           // title="Testing 2"
         />
         <CategoryCard
-          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
+          onPress={handlePress.bind(this, 'Accessories')}
+          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/4522698.webp')}
           categoryId="Accessories"
           // title="Testing 2"
         />
         <CategoryCard
-          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
+          onPress={handlePress.bind(this, 'Bags')}
+          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/4522696.webp')}
           categoryId="Bags"
           // title="Testing 2"
         />
         <CategoryCard
-          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
+          onPress={handlePress.bind(this, 'Footwear')}
+          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/7332676.webp')}
           categoryId="Footwear"
           // title="Testing 2"
         />
         <CategoryCard
-          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
+          onPress={handlePress.bind(this, 'Sports')}
+          imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Icons/5818789.webp')}
           categoryId="Sports"
           // title="Testing 2"
-        />
+        ></CategoryCard>
       </View>
     </ScrollView>
   );
