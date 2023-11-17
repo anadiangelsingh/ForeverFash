@@ -12,12 +12,27 @@ import IconButton from '../components/ui/Icon';
 import CategoryTile from '../components/ui/CategoryTile';
 import {Title} from 'react-native-paper';
 import OfferCard from '../components/ui/OfferCard';
+import {useNavigation} from '@react-navigation/native'; // Import useNavigation
 
 function HomeScreen() {
   const screenHeight = Dimensions.get('window').height;
   const topSpacePercentage = 0;
   const topSpace = (screenHeight * topSpacePercentage) / 100;
 
+  const navigation = useNavigation(); // Initialize navigation
+
+  const handlePress = pressType => {
+    switch (pressType) {
+      case 'Women':
+        navigation.navigate('Women');
+        console.log('Pressed');
+        break;
+      case 'Kids':
+        navigation.navigate('Kids');
+        console.log('Pressed');
+        break;
+    }
+  };
   return (
     <SafeAreaView style={styles.main}>
       <ScrollView
@@ -44,12 +59,14 @@ function HomeScreen() {
         </View>
         <View>
           <OfferCard
+            onPress={handlePress.bind(this, 'Women')}
             imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             OfferPercentage="40%"
             OfferDesc="on all Women's collection"
             // title="Testing 2"
           />
           <OfferCard
+            onPress={handlePress.bind(this, 'Kids')}
             imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             OfferPercentage="50%"
             OfferDesc="on all Kids's collection"

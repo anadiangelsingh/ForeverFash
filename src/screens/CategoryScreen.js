@@ -9,7 +9,6 @@ import {
 import {useNavigation} from '@react-navigation/native'; // Import useNavigation
 
 import CategoryCard from '../components/ui/CategoryCard';
-import WomenScreen from './Sub-Categories/Women';
 
 function CategoryScreen() {
   const screenHeight = Dimensions.get('window').height;
