@@ -11,7 +11,6 @@ import AuthContextProvider from './src/components/store/auth-context';
 import HomeScreen from './src/screens/HomeScreen';
 import TabNavigator from './src/components/store/TabNavigator';
 import CategoryScreen from './src/screens/CategoryScreen';
-import WishlistScreen from './src/screens/WishlistScreen';
 import Women from './src/screens/Sub-Categories/Women';
 import Men from './src/screens/Sub-Categories/Men';
 import Kids from './src/screens/Sub-Categories/Kids';
