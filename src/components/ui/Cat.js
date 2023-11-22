@@ -19,7 +19,7 @@ function Cat({iconName, onPress, catName, categoryId, source}) {
         {/* <Text>{categoryId}</Text> */}
         <Text>{catName}</Text>
       </View>
-    </TouchableOpacity>
+    </TouchableOpacity> 
   );
 }
 
