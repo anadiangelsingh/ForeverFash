@@ -28,7 +28,7 @@ function HomeScreen() {
         console.log('Pressed');
         break;
       case 'Kids':
-        navigation.navigate('Kids');
+        navigation.navigate('Kids'); 
         console.log('Pressed');
         break;
     }
@@ -81,12 +81,14 @@ function HomeScreen() {
             imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             itemDesc="Stylish Suit"
             itemPrice="87.00"
+            productId="product1"
             onPress={() => console.log('Card pressed!')}
           />
           <CategoryTile
             imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             itemDesc="New Shirt"
             itemPrice="72.00"
+            productId="product2"
           />
         </View>
         <View style={styles.cardStyle}>
@@ -94,12 +96,14 @@ function HomeScreen() {
             imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             itemDesc="Stylish Suit"
             itemPrice="87.00"
+            productId="product3"
             onPress={() => console.log('Card pressed!')}
           />
           <CategoryTile
             imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             itemDesc="New Shirt"
             itemPrice="72.00"
+            productId="product4"
           />
         </View>
         <View style={styles.cardStyle}>
@@ -107,12 +111,14 @@ function HomeScreen() {
             imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             itemDesc="Stylish Suit"
             itemPrice="87.00"
+            productId="product4"
             onPress={() => console.log('Card pressed!')}
           />
           <CategoryTile
             imageSource={require('/Users/anadiangelsingh/ReactWorkspace/ForeverFash/src/Assets/Images/marissa-grootes-flRm0z3MEoA-unsplash.jpg')}
             itemDesc="New Shirt"
             itemPrice="72.00"
+            productId="product5"
           />
         </View>
       </ScrollView>

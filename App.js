@@ -153,10 +153,10 @@ function Navigation() {
 
   return (
     <NavigationContainer>
-      <AuthenticatedStack />
+      {/* <AuthenticatedStack /> */}
 
-      {/* {!authCtx.isAuthenticated && <AuthStack />}
-      {authCtx.isAuthenticated && <AuthenticatedStack />} */}
+      {!authCtx.isAuthenticated && <AuthStack />}
+      {authCtx.isAuthenticated && <AuthenticatedStack />}
     </NavigationContainer>
   );
 }

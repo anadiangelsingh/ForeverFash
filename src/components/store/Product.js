@@ -6,22 +6,23 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
-import {fetchCategories} from '../../util/http';
+import {fetchProduct} from '../../util/http';
 
-export function Categories({categoryId}) {
-  const [categories, setCategories] = useState([]);
+export function Product() {
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetchCategories(categoryId);
-        //console.log('API Response:', response);
+        const response = await fetchProduct(products);
+        console.log('API Response:', response);
 
         if (response.status === 200) {
           const data = response.data;
-          setCategories(data);
+          const productsArray = data.products;
+          setProducts(data);
           setLoading(false);
         } else {
           setError('Failed to fetch data from the API');
@@ -32,26 +33,27 @@ export function Categories({categoryId}) {
         setLoading(false);
       }
     };
+    console.log(products);
 
     fetchData();
-  }, [categoryId]);
-
-  // const handleCategoryClick = categoryId => {
-  //   // Handle category click here
-  //   console.log(`Clicked category: ${categories[categoryId].name}`);
-  //   console.log(categoryId);
-  // };
-
+  }, []);
+  console.log('wqerty', products);
   return (
     <View>
       {loading ? (
         <ActivityIndicator size="large" color="#0000ff" />
       ) : error ? (
         <Text style={{color: 'red'}}>{error}</Text>
-      ) : categories ? (
-        <Text>{categories.name}</Text>
-      ) : // Add more category-specific content here
-      null}
+      ) : (
+        Object.values(products).map((product, index) => (
+          <View key={index}>
+            <Text>{product.category}</Text>
+            <Text>{product.name}</Text>
+            <Text>{product.price}</Text>
+            {/* Add other product details here if needed */}
+          </View>
+        ))
+      )}
     </View>
   );
 }
